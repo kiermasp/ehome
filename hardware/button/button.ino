@@ -1,109 +1,187 @@
 #include <mcp_can.h>
 #include <SPI.h>
 #include <avr/sleep.h>
+#include <avr/eeprom.h>
+#include <OneWire.h>
+#include <DallasTemperature.h>
+#include <eHome.h>
+#include <common.h>
 
-MCP_CAN CAN(10);                                      // Set CS to pin 10
+#define BUTTON_OPEN 0x00 // – rozwarte
+#define BUTTON_PUSHED 0xFF // – zwarte
+#define BUTTON_HOLDED_400MS 0xFA // – zwarte i przytrzymane przez 400ms
+#define BUTTON_HOLDED_1S 0xFB // – zwarte i przytrzymane przez 1s
+#define BUTTON_HOLDED_2S 0xFC // – zwarte i przytrzymane przez 2s
+#define BUTTON_HOLDED_3S 0xFD // – zwarte i przytrzymane przez 3s
+#define BUTTON_HOLDED_4S 0xFE // – zwarte i przytrzymane przez 4s
 
-boolean buttonPressed;
-boolean buttonState;
-unsigned long interrupt_time;
-boolean processing = false;
+MCP_CAN CAN(10);  // Set CS to pin 10
+// DS18S20 Temperature chip i/o
+OneWire oneWire(11);
+// Pass our oneWire reference to Dallas Temperature.
+DallasTemperature sensors(&oneWire);
+eHome ehome(&CAN);
+
+static uint8_t const NUM_BUTTONS = 8;
+
+uint32_t holdTime;
+uint32_t holdTimeTmp;
+uint32_t modTime;
+
+uint32_t temperatureDelay = 0;
+uint8_t buttonPressRegister[NUM_BUTTONS];
+uint8_t i;
+
+uint32_t BUTTON_FRAME_ID;
+uint32_t TEMPERATURE_FRAME_ID;
+
+uint32_t resetTime;
+
+boolean temperatureEnabled = false;
+
+//declare reset function @ address 0
+
+struct Button {
+  boolean pressed;
+  uint8_t id;
+  uint8_t state;
+  uint32_t pressTime;
+  uint8_t messageCounter;
+} Buttons[NUM_BUTTONS];
 
 void setup()
 {
-
   Serial.begin(115200);
-  attachInterrupt(0, debounceInterrupt, FALLING); // start interrupt
 
-  pinMode(0, INPUT);           // set pin to input
-  digitalWrite(0, HIGH);       // turn on pullup resistors
+START_INIT:
 
-  pinMode(1, INPUT);           // set pin to input
-  digitalWrite(1, HIGH);       // turn on pullup resistors
-
-  pinMode(2, INPUT);           // set pin to input
-  digitalWrite(2, HIGH);       // turn on pullup resistors
-
-  pinMode(3, INPUT);           // set pin to input
-  digitalWrite(3, HIGH);       // turn on pullup resistors
-
-  pinMode(4, INPUT);           // set pin to input
-  digitalWrite(4, HIGH);       // turn on pullup resistors
-
-
-
-//START_INIT:
-
-  /*if (CAN_OK == CAN.begin(CAN_500KBPS))                  // init can bus : baudrate = 500k
+  if (CAN_OK == CAN.begin(CAN_125KBPS))                  // init can bus : baudrate = 500k
   {
     Serial.println("CAN BUS Shield init ok!");
   }
   else
   {
     Serial.println("CAN BUS Shield init fail");
-    Serial.println("Init CAN BUS Shield again");
     delay(100);
     goto START_INIT;
-  }*/
-
-}
-
-void debounceInterrupt() {
-
-  Serial.println("INTERRUPT");
-
-  if (!processing) {
-    buttonPressed = true;
-    processing = true;
-    Serial.println("changedButtonPressed");
   }
+
+  BUTTON_FRAME_ID = ehome.getFrameId(0x301); //set frame for button
+  TEMPERATURE_FRAME_ID = ehome.getFrameId(0x302); //set frame for button
+
+  for (i = 0; i < NUM_BUTTONS; i++) {
+    pinMode(i, INPUT);           // set pin to input
+    digitalWrite(i, HIGH);       // turn on pullup resistors
+  }
+
+  // Start up the library
+  sensors.begin();
+  sensors.setWaitForConversion(false);
 }
 
-void sleepNow() {
-  delay(200);     // this delay is needed, the sleep
-  Serial.println("Going to sleep");
-
-  set_sleep_mode(SLEEP_MODE_PWR_DOWN);   // sleep mode is set here
-
-  sleep_enable();          // enables the sleep bit in the mcucr register
-  // so sleep is possible. just a safety pin
-
-  attachInterrupt(0, debounceInterrupt, FALLING); // start interrupt
-
-  sleep_mode();            // here the device is actually put to sleep!!
-  // THE PROGRAM CONTINUES FROM HERE AFTER WAKING UP
-  sleep_disable();         // first thing after waking from sleep:
-  // disable sleep...
-  detachInterrupt(0);      // disables interrupt 0 on pin 2 so the
-  // wakeUpNow code will not be executed
-  // during normal running time.
-
-}
-
-//unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+unsigned char len = 0;
+unsigned char buf[8];
+long canId;
 
 void loop()
 {
-  if (buttonPressed) {
-    processing = true;
-    buttonPressed = false;
-
-    delay(30); //delay to wait for change button state
-
-    if (digitalRead(8) == LOW) {
-
-      /**for (int id = 0; id < 10; id++)
-      {
-      memset(stmp, id, sizeof(stmp));  // set id to send data buff
-      CAN.sendMsgBuf(id, 0, sizeof(stmp), stmp);
-      Serial.println("CAN BUS sending message");
-      }*/
-      Serial.println("Go LOW");
+  if (CAN_MSGAVAIL == CAN.checkReceive())           // check if data coming
+  {
+    CAN.readMsgBuf(&len, buf);
+    canId = CAN.getCanId();
+    if (ehome.getFrameId(0x101) == canId) {
+      for (i = 0; i < NUM_BUTTONS; i++) {
+        sendButtonMessage(i, Buttons[i].state);
+      }
     }
-    delay(1000);
-    processing = false;
   }
 
-  sleepNow();
+  if (temperatureEnabled) {
+    if (millis() - temperatureDelay > 1000) {
+      temperatureDelay = 0;
+      Serial.print("Temperature for Device 1 is: ");
+      Serial.println(sensors.getTempCByIndex(0)); // Why "byIndex"?
+    }
+
+    if (temperatureDelay == 0) {
+      temperatureDelay = 1 + millis();
+      sensors.requestTemperatures(); // Send the command to get temperatures
+      // request to all devices on the bus
+      Serial.println(" Requesting temperatures...");
+    }
+  }
+
+
+  for (i = 0; i < NUM_BUTTONS; i++) {
+    if (digitalRead(i) == HIGH && Buttons[i].pressed) {
+
+      Buttons[i].pressed = false;
+      Buttons[i].pressTime = 0;
+      Buttons[i].messageCounter = 0;
+      sendButtonMessage(i, BUTTON_OPEN);
+    }
+  }
+
+  delay(20);
+
+  for (i = 0; i < NUM_BUTTONS; i++) {
+    if (digitalRead(i) == LOW && !Buttons[i].pressed) {
+      Buttons[i].pressed = true;
+      Buttons[i].state = BUTTON_OPEN;
+      Buttons[i].pressTime = millis();
+    }
+  }
+
+  for (i = 0; i < NUM_BUTTONS; i++) {
+    if (Buttons[i].pressed) {
+
+      holdTime = millis() - Buttons[i].pressTime;
+      modTime = holdTime % 500;
+
+      Serial.println(holdTime);
+      if (modTime < 100 && Buttons[i].messageCounter == 0) {
+        Buttons[i].messageCounter = 1;
+        sendButtonMessage(i, BUTTON_PUSHED);
+      } else if (modTime > 100) {
+        buttonPressRegister[i] = 0;
+      }
+
+      if (holdTime >= 400 && Buttons[i].messageCounter == 0)
+      {
+        Buttons[i].messageCounter = 1;
+        sendButtonMessage(i, BUTTON_HOLDED_400MS);
+      }
+      else if (holdTime >= 1000 && Buttons[i].messageCounter == 1)
+      {
+        Buttons[i].messageCounter = 2;
+        sendButtonMessage(i, BUTTON_HOLDED_1S);
+      }
+      else if (holdTime >= 2000 && Buttons[i].messageCounter == 2)
+      {
+        Buttons[i].messageCounter = 3;
+        sendButtonMessage(i, BUTTON_HOLDED_2S);
+      }
+      else if (holdTime >= 3000 && Buttons[i].messageCounter == 3)
+      {
+        Buttons[i].messageCounter = 4;
+        sendButtonMessage(i, BUTTON_HOLDED_3S);
+      }
+      else if (holdTime >= 4000 && Buttons[i].messageCounter == 4)
+      {
+        Buttons[i].messageCounter = 5;
+        sendButtonMessage(i, BUTTON_HOLDED_4S);
+      }
+    }
+  }
+}
+
+
+unsigned char stmp[8];
+
+void sendButtonMessage(uint8_t chanId, uint8_t buttonState) {
+  Buttons[chanId].state = buttonState;
+  stmp[0] = chanId;
+  stmp[1] = buttonState;
+  CAN.sendMsgBuf(BUTTON_FRAME_ID, 1, sizeof(stmp), stmp);
 }
 

@@ -1,0 +1,128 @@
+
+GccApplication1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000c0  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000030  00000000  00000000  00000114  2**0
+                  CONTENTS, READONLY
+  2 .debug_aranges 00000030  00000000  00000000  00000144  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   000000be  00000000  00000000  00000174  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 00000080  00000000  00000000  00000232  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   0000006a  00000000  00000000  000002b2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000050  00000000  00000000  0000031c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    00000181  00000000  00000000  0000036c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    0000002f  00000000  00000000  000004ed  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 00000020  00000000  00000000  0000051c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__ctors_end>
+   4:	0c 94 54 00 	jmp	0xa8	; 0xa8 <__vector_1>
+   8:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+   c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  10:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  14:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  18:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  1c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  20:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  24:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  28:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  2c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  30:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  34:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  38:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  3c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  40:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  44:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  48:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  4c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  50:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  54:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  58:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  5c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  60:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  64:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  68:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  6c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  70:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  74:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+  78:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
+
+0000007c <__ctors_end>:
+  7c:	11 24       	eor	r1, r1
+  7e:	1f be       	out	0x3f, r1	; 63
+  80:	cf ef       	ldi	r28, 0xFF	; 255
+  82:	d8 e0       	ldi	r29, 0x08	; 8
+  84:	de bf       	out	0x3e, r29	; 62
+  86:	cd bf       	out	0x3d, r28	; 61
+  88:	0e 94 4c 00 	call	0x98	; 0x98 <main>
+  8c:	0c 94 5e 00 	jmp	0xbc	; 0xbc <_exit>
+
+00000090 <__bad_interrupt>:
+  90:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000094 <_Z13initInterruptv>:
+#include <stdarg.h>
+
+
+void initInterrupt()
+{
+	EIMSK |= (1 << INT2);
+  94:	ea 9a       	sbi	0x1d, 2	; 29
+  96:	08 95       	ret
+
+00000098 <main>:
+	//sei(); set external interuptes 
+}
+
+int main(void)
+{
+	DDRD |= (1 << PORTD0); // set all as except
+  98:	50 9a       	sbi	0x0a, 0	; 10
+	DDRB = 0b11111111; // set all as output
+  9a:	8f ef       	ldi	r24, 0xFF	; 255
+  9c:	84 b9       	out	0x04, r24	; 4
+	DDRC = 0b11111111; // set all as output
+  9e:	87 b9       	out	0x07, r24	; 7
+	PORTD |= (1 << PORTD0);
+  a0:	58 9a       	sbi	0x0b, 0	; 11
+
+	initInterrupt();
+  a2:	0e 94 4a 00 	call	0x94	; 0x94 <_Z13initInterruptv>
+  a6:	ff cf       	rjmp	.-2      	; 0xa6 <main+0xe>
+
+000000a8 <__vector_1>:
+	return 0;
+}
+
+
+
+ISR(INT0_vect){
+  a8:	1f 92       	push	r1
+  aa:	0f 92       	push	r0
+  ac:	0f b6       	in	r0, 0x3f	; 63
+  ae:	0f 92       	push	r0
+  b0:	11 24       	eor	r1, r1
+	
+  b2:	0f 90       	pop	r0
+  b4:	0f be       	out	0x3f, r0	; 63
+  b6:	0f 90       	pop	r0
+  b8:	1f 90       	pop	r1
+  ba:	18 95       	reti
+
+000000bc <_exit>:
+  bc:	f8 94       	cli
+
+000000be <__stop_program>:
+  be:	ff cf       	rjmp	.-2      	; 0xbe <__stop_program>
