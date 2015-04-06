@@ -1,0 +1,44 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import jidefx.scene.control.field.MaskTextField?>
+<?import jidefx.scene.control.field.LabeledTextField?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="MainController">
+
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+
+    <center>
+        <VBox fx:id="mainVGroup" spacing="5">
+
+            <HBox spacing="5">
+                <ComboBox fx:id="comboBoxPorts"/>
+                <Button text="Connect" fx:id="connectButton"/>
+                <Button text="Disconnect" fx:id="disconnectButton"/>
+            </HBox>
+
+            <LabeledTextField prefWidth="300" label="Filter:" fx:id="filterTextField" promptText="find..."/>
+
+            <TableView fx:id="messageTableView">
+                <columns>
+                    <TableColumn text="MessageId" fx:id="messageIdCol"/>
+                    <TableColumn text="GroupId" fx:id="groupIdCol"/>
+                    <TableColumn text="NodeId" fx:id="nodeIdCol"/>
+                    <TableColumn text="Message" fx:id="messageCol" prefWidth="200"/>
+                </columns>
+            </TableView>
+            <Button text="Clear" fx:id="clearMessages"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox>
+            <MaskTextField style='-fx-font: bold 16px "Courier New";' prefWidth="65" fx:id="canMessageId"/>
+            <MaskTextField style='-fx-font: bold 16px "Courier New";' prefWidth="45" fx:id="canGroupId"/>
+            <MaskTextField style='-fx-font: bold 16px "Courier New";' prefWidth="45" fx:id="canNodeId"/>
+            <MaskTextField style='-fx-font: bold 16px "Courier New";' prefWidth="250" fx:id="canMessage"/>
+            <Button fx:id="btnSend" text="Send Message"/>
+        </HBox>
+    </bottom>
+</BorderPane>

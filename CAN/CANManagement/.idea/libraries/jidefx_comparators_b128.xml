@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jidefx-comparators-b128">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/library/jidefx-oss/module-comparators/dist/jidefx-comparators-b128.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

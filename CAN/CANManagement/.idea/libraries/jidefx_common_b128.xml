@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jidefx-common-b128">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/library/jidefx-oss/module-common/dist/jidefx-common-b128.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
