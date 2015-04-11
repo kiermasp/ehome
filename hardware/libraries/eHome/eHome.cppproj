@@ -28,15 +28,15 @@
     <eraseonlaunchrule>1</eraseonlaunchrule>
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-  <options />
-  <configurations />
-  <files />
-  <documentation help="" />
-  <offline-documentation help="" />
-  <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
-  </dependencies>
-</framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
+        </dependencies>
+      </framework-data>
     </AsfFrameworkConfig>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -72,8 +72,15 @@
   <avrgcccpp.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
+      <Value>mcp_can.h</Value>
+      <Value>mcp_can_dfs.h</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>C:\dev\ehome\hardware\libraries\CAN_BUS_Shield</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.LibrarySearchPaths>
 </AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
@@ -112,14 +119,24 @@
   <avrgcccpp.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
+      <Value>mcp_can.h</Value>
+      <Value>mcp_can_dfs.h</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>C:\dev\ehome\hardware\libraries\CAN_BUS_Shield</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.LibrarySearchPaths>
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="eHome.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="eHome.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

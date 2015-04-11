@@ -2,28 +2,33 @@
 #define eHome_h
 
 #include <mcp_can.h>
-
-// you can exclude onewire_search by defining that to 0
-#ifndef ID_ADDR
-#define ID_ADDR (uint8_t*)0x1
-#endif
-
-// Device group id
-#ifndef GROUP_ADDR
-#define GROUP_ADDR (uint8_t*)0x2
-#endif
-
-// Device group id
-#ifndef FIRMWARE_VERSION
-#define FIRMWARE_VERSION (uint16_t*)0x3
-#endif
+#include <Frames.h>
 
 
+class Message{
+	
+	public:
+		uint16_t frameId;
+		uint8_t nodeId;
+		uint8_t groupId;
+		byte data[8];
+
+		bool isStatusFrame();
+
+		
+	private:
+
+		uint32_t _canId;
+		unsigned char _len;
+		unsigned char* _buf[8];
+	};
 
 class eHome {
 	
 	public:
 	  eHome(MCP_CAN*);
+	  
+	  uint8_t checkReceive();
 	  
 	  void(* resetFunc) (void) = 0;
 	  
@@ -33,15 +38,29 @@ class eHome {
 	  void setGroupId(uint8_t id);
 	  uint8_t getGroupId();
 	  
-	  void setFirmwareId(uint16_t version);
-	  uint16_t getFirmwareId();
+	  void setFirmwareId(const void* _src);
+	  void getFirmwareId(void* _dst);
 	  
 	  uint32_t getFrameId(uint16_t frameId);
 	  
-	private:
-	  // Take a pointer to one CAN instance
-	  MCP_CAN* _can;
+	  Message* getMessage();
 	  
+	  void sendMessage(uint16_t frameId, byte* data);
+	  
+	private:
+		  
+	  // Take a pointer to one CAN instance
+	  uint8_t _nodeId;
+	  uint8_t _groupId;
+	  
+	  MCP_CAN* _can;
+	  Message _message;
+	  unsigned char _len = 0;
+	  unsigned char _buf[8];
+	  long _canId;
+	  
+	  void setupDeviceAddress();
+	  void sendDeviceStatus();
 	};
 	
 #endif

@@ -1,5 +1,6 @@
 import core.can.CanBusMessage;
 import core.can.CanBusParser;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -224,7 +225,14 @@ public class MainController implements Initializable {
                                                 }
                                             }
 
-                                            canMessagesData.add(message);
+                                            Platform.runLater(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    canMessagesData.add(message);
+                                                }
+                                            });
+
+
                                         }
 
 

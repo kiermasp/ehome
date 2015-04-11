@@ -2,218 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="C:\dev\ehome\library\CAN_BUS_Shield" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader.atsuo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/Debug/CanBusBootloader.elf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../firmware/Frames.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1.atsuo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/GccApplication1.elf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/GccApplication1.o" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2.atsuo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/GccApplication2.elf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/GccApplication2.o" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3.atsuo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/GccApplication3.elf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/GccApplication3.o" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4.atsuo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/GccApplication4.elf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/GccApplication4.o" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.b#4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.s#4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/commons-lang3-3.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/javadoc/jssc-2.6.0-javadoc.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/src/jssc-2.6.0-src.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/jssc-2.8.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/jssc.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/libusb4java-1.2.0-linux-arm.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/libusb4java-1.2.0-linux-x86.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/libusb4java-1.2.0-linux-x86_64.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/libusb4java-1.2.0-osx-x86.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/libusb4java-1.2.0-osx-x86_64.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/libusb4java-1.2.0-windows-x86.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/libusb4java-1.2.0-windows-x86_64.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/mockito-all-1.9.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/relays/pcb_atmega - Copy.brd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/relays/pcb_atmega.s#4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/realays/pcb/pcb_atmega.sch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/realays/pcb/pcb_atmega_.brd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/realays/pcb/univ_3-2-4-x-label.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/usb4java-1.2.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Arduino.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/Bootldr.aps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus-seee/CAN-BUS Shield  v0.9b.b#1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus-seee/CAN-BUS Shield  v0.9b.brd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/realays/CAN-BUS Shield  v0.9b.brd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus-seee/CAN-BUS Shield  v0.9b.s#1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus-seee/CAN-BUS Shield  v0.9b.sch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CANManagement.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/CDC.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/COPYING.LESSER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader.atsln" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/CanBusBootloader.cppproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/Debug/CanBusBootloader.eep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/Debug/CanBusBootloader.hex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/Debug/CanBusBootloader.lss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/Debug/CanBusBootloader.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/Debug/CanBusBootloader.srec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/can/CanBusParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/core/can/CanBusParserTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Client.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1.atsln" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/GccApplication1.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/GccApplication1.cppproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/GccApplication1.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/GccApplication1.eep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/GccApplication1.hex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/GccApplication1.lss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/GccApplication1.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/GccApplication1.srec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2.atsln" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/GccApplication2.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/GccApplication2.cppproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/GccApplication2.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/GccApplication2.eep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/GccApplication2.hex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/GccApplication2.lss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/GccApplication2.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/GccApplication2.srec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3.atsln" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/GccApplication3.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/GccApplication3.cppproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/GccApplication3.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/GccApplication3.eep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/GccApplication3.hex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/GccApplication3.lss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/GccApplication3.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/GccApplication3.srec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4.atsln" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/GccApplication4.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/GccApplication4.cproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/GccApplication4.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/GccApplication4.eep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/GccApplication4.hex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/GccApplication4.lss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/GccApplication4.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/GccApplication4.srec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/HID.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/HardwareSerial.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/HardwareSerial.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/HardwareSerial0.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/HardwareSerial1.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/HardwareSerial2.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/HardwareSerial3.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/HardwareSerial_private.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/IPAddress.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/IPAddress.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/Debug/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Print.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Print.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Printable.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/ProjectFiles/ProjectMain.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/ProjectFiles/ProjectMain.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/RXTXcomm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/SPI.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/SPI.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Server.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Stream.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Stream.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Tone.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/USBAPI.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/USBCore.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/USBCore.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/USBDesc.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/Udp.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/WCharacter.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/WInterrupts.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/WMath.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/WString.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/WString.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/abi.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/aes.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/avrub.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/binary.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/bootcfg.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/bootldr.aws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/bootldr.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/bootldr.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.b#1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.b#2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.b#3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.brd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.s#1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.s#2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.s#3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/can-bus/canbus_shield-v12.sch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/description.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/relays/eagle.epf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/hooks.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jSSC_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/java.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_common_0_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_common_b128.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_comparators_b128.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_converters_0_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_converters_b128.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_decoration_0_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_decoration_b128.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_fields_0_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_fields_b128.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_validation_0_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jidefx_validation_b128.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/src/cpp/windows/jssc.c++" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/src/cpp/_nix_based/jssc.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jssc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/jSSC-2.6.0-Release/src/cpp/jssc_SerialNativeInterface.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/main.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/Debug/makedep.mk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication1/GccApplication1/Debug/makedep.mk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication2/GccApplication2/Debug/makedep.mk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication3/GccApplication3/Debug/makedep.mk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/GccApplication4/GccApplication4/Debug/makedep.mk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/mcp_can.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/mcp_can.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/mcp_can_dfs.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockito_all_1_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/new.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/new.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/pc1crypt.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/relays/pcb_atmega.brd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/relays/pcb_atmega.s#1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/relays/pcb_atmega.s#2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/relays/pcb_atmega.s#3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/relays/pcb_atmega.sch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/readme.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/test.aps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/test.aws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/test.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/testcfg.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/wiring.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/wiring_analog.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/wiring_digital.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/wiring_private.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/wiring_pulse.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hardware/bootloader/CanBusBootloader/CanBusBootloader/src/arduino/wiring_shift.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/jidefx-oss/module-fields/src/main/java/jidefx/scene/control/field/FormattedTextField.java" afterPath="$PROJECT_DIR$/library/jidefx-oss/module-fields/src/main/java/jidefx/scene/control/field/FormattedTextField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hardware/button/button.ino" afterPath="$PROJECT_DIR$/../hardware/button/button.ino" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -285,11 +74,11 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30569947" vertical-offset="3070" max-vertical-offset="4692">
-              <caret line="204" column="22" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.33241758" vertical-offset="2905" max-vertical-offset="4590">
+              <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#5119:5526" expanded="false" />
+                <element signature="e#8733#8734#0" expanded="true" />
+                <element signature="e#8865#8866#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -298,7 +87,7 @@
       <file leaf-file-name="SerialPortReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/SerialPortReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1190">
+            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1190">
               <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
               <folding />
             </state>
@@ -317,14 +106,14 @@
       </file>
       <file leaf-file-name="main.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="833">
               <caret line="30" column="53" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="53" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -333,7 +122,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="391">
               <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#574#575#0" expanded="false" />
+                <element signature="e#602#603#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -343,7 +136,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="697">
               <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-              <folding />
+              <folding>
+                <element signature="e#507#508#0" expanded="false" />
+                <element signature="e#545#546#0" expanded="false" />
+                <element signature="e#591#592#0" expanded="false" />
+                <element signature="e#627#628#0" expanded="false" />
+                <element signature="e#661#662#0" expanded="false" />
+                <element signature="e#697#698#0" expanded="false" />
+                <element signature="e#741#742#0" expanded="false" />
+                <element signature="e#775#776#0" expanded="false" />
+                <element signature="e#809#810#0" expanded="false" />
+                <element signature="e#874#875#0" expanded="false" />
+                <element signature="e#918#919#0" expanded="false" />
+                <element signature="e#952#953#0" expanded="false" />
+                <element signature="e#985#986#0" expanded="false" />
+                <element signature="e#1020#1021#0" expanded="false" />
+                <element signature="e#1072#1073#0" expanded="false" />
+                <element signature="e#1101#1102#0" expanded="false" />
+                <element signature="e#1145#1146#0" expanded="false" />
+                <element signature="e#1184#1185#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -403,9 +215,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -454,7 +267,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -548,6 +360,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -563,7 +376,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="DefaultCfmlFileTemplate" value="ColdFusion File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/library/jidefx-oss/module-validation/dist/jidefx-validation-b128.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -971,19 +784,21 @@
       <workItem from="1427888048496" duration="14755000" />
       <workItem from="1428018825129" duration="9882000" />
       <workItem from="1428337891790" duration="1216000" />
+      <workItem from="1428436583796" duration="6521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105449000" />
+    <option name="totallyTimeSpent" value="111970000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="728" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32232705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -991,23 +806,22 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41379312" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20204978" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36320755" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27580646" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32232705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1046,7 +860,7 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="68" />
+      <option name="time" value="70" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1059,13 +873,60 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="391">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#602#603#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/can/CanBusMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="697">
+          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <folding>
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#591#592#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#697#698#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#809#810#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#952#953#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <element signature="e#1184#1185#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_l/jre/lib/ext/jfxrt.jar!/com/sun/javafx/scene/control/skin/LabeledText.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2686">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4726">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#5119:5526" expanded="false" />
+            <element signature="e#8733#8734#0" expanded="true" />
+            <element signature="e#8865#8866#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1087,21 +948,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="833">
           <caret line="30" column="53" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="53" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="391">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#602#603#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,7 +974,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="697">
           <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-          <folding />
+          <folding>
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#591#592#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#697#698#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#809#810#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#952#953#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <element signature="e#1184#1185#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1126,8 +1010,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2523" max-vertical-offset="3604">
           <caret line="206" column="87" selection-start-line="206" selection-start-column="87" selection-end-line="206" selection-end-column="87" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#5119:5526" expanded="false" />
+            <element signature="e#8733#8734#0" expanded="true" />
+            <element signature="e#8865#8866#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1149,21 +1033,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/can/CanBusMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="867">
           <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-          <folding />
+          <folding>
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#591#592#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#697#698#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#809#810#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#952#953#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <element signature="e#1184#1185#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1180,21 +1083,21 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4488">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#5119:5526" expanded="false" />
+            <element signature="e#8733#8734#0" expanded="true" />
+            <element signature="e#8865#8866#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="680">
           <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CANManagement.iml">
@@ -1230,7 +1133,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2176">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#602#603#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1245,7 +1152,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="459">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#602#603#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,14 +1204,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scanner/CANscanner.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/library/jSSC-2.6.0-Release/jssc-2.8.0.jar!/jssc/SerialPort.class">
@@ -1395,19 +1306,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/SerialPortReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1275">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/can/CanBusMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="867">
           <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-          <folding />
+          <folding>
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#591#592#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#697#698#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#809#810#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#952#953#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <element signature="e#1184#1185#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1423,28 +1345,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#602#603#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="833">
           <caret line="30" column="53" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="53" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/SerialPortReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1275">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30569947" vertical-offset="3070" max-vertical-offset="4692">
-          <caret line="204" column="22" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.33241758" vertical-offset="2905" max-vertical-offset="4590">
+          <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#5119:5526" expanded="false" />
+            <element signature="e#8733#8734#0" expanded="true" />
+            <element signature="e#8865#8866#0" expanded="true" />
           </folding>
         </state>
       </provider>
