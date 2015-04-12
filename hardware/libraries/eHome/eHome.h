@@ -28,6 +28,8 @@ class eHome {
 	public:
 	  eHome(MCP_CAN*);
 	  
+	  uint32_t actions;
+	  
 	  uint8_t checkReceive();
 	  
 	  void(* resetFunc) (void) = 0;
@@ -59,6 +61,7 @@ class eHome {
 	  unsigned char _buf[8];
 	  long _canId;
 	  
+	  void setupActionRegister();
 	  void setupDeviceAddress();
 	  void sendDeviceStatus();
 	};

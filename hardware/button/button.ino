@@ -7,8 +7,6 @@
 #include <eHome.h>
 
 #define BUTTON_OPEN 0x00 // – rozwarte
-
-#define BUTTON_OPEN 0x00 // – rozwarte
 #define BUTTON_PUSHED 0xFF // – zwarte
 #define BUTTON_HOLDED_400MS 0xFA // – zwarte i przytrzymane przez 400ms
 #define BUTTON_HOLDED_1S 0xFB // – zwarte i przytrzymane przez 1s
@@ -38,10 +36,6 @@ uint32_t resetTime;
 
 eHome ehome(&CAN);
 
-boolean temperatureEnabled = false;
-
-//declare reset function @ address 0
-
 struct Button {
   boolean pressed;
   uint8_t id;
@@ -55,7 +49,7 @@ Message message;
 void setup()
 {
   Serial.begin(115200);
-
+        
 START_INIT:
 
   if (CAN_OK == CAN.begin(CAN_125KBPS))                  // init can bus : baudrate = 500k
@@ -96,7 +90,7 @@ void loop()
   }
 
 
-  if (temperatureEnabled) {
+  if (ehome.actions & 128) {
     if (millis() - temperatureDelay > 1000) {
       temperatureDelay = 0;
       sendTemperatureMessage(sensors.getTempCByIndex(0));
@@ -114,7 +108,9 @@ void loop()
       Buttons[i].pressed = false;
       Buttons[i].pressTime = 0;
       Buttons[i].messageCounter = 0;
-      sendButtonMessage(i, BUTTON_OPEN);
+      if (ehome.actions & 1) {
+        sendButtonMessage(i, BUTTON_OPEN);
+      }
     }
   }
 
@@ -136,7 +132,10 @@ void loop()
 
       if (modTime < 100 && Buttons[i].messageCounter == 0) {
         Buttons[i].messageCounter = 1;
-        sendButtonMessage(i, BUTTON_PUSHED);
+        //check if aciton is enabled
+        if (ehome.actions & 2) {
+          sendButtonMessage(i, BUTTON_PUSHED);
+        }
       } else if (modTime > 100) {
         buttonPressRegister[i] = 0;
       }
@@ -144,34 +143,49 @@ void loop()
       if (holdTime >= 400 && Buttons[i].messageCounter == 0)
       {
         Buttons[i].messageCounter = 1;
-        sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_400MS);
+        //check if aciton is enabled
+        if (ehome.actions & 4) {
+          sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_400MS);
+        }
       }
       else if (holdTime >= 1000 && Buttons[i].messageCounter == 1)
       {
         Buttons[i].messageCounter = 2;
-        sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_1S);
+        //check if aciton is enabled
+        if (ehome.actions & 8) {
+          sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_1S);
+        }
       }
       else if (holdTime >= 2000 && Buttons[i].messageCounter == 2)
       {
         Buttons[i].messageCounter = 3;
-        sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_2S);
+        //check if aciton is enabled
+        if (ehome.actions & 16) {
+          sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_2S);
+        }
       }
       else if (holdTime >= 3000 && Buttons[i].messageCounter == 3)
       {
         Buttons[i].messageCounter = 4;
-        sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_3S);
+        //check if aciton is enabled
+        if (ehome.actions & 32) {
+          sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_3S);
+        }
       }
       else if (holdTime >= 4000 && Buttons[i].messageCounter == 4)
       {
         Buttons[i].messageCounter = 5;
-        sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_4S);
+        //check if aciton is enabled
+        if (ehome.actions & 64) {
+          sendButtonMessage(Buttons[i].id, BUTTON_HOLDED_4S);
+        }
       }
     }
   }
 }
 
 void sendButtonMessage(uint8_t chanId, uint8_t buttonState) {
-  byte newData[8] = {0,0,0,0,0,0,0,0};
+  byte newData[8] = {0, 0, 0, 0, 0, 0, 0, 0};
   Buttons[chanId].state = buttonState;
   newData[0] = chanId;
   newData[1] = buttonState;

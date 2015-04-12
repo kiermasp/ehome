@@ -27,14 +27,14 @@ void sendMessage(uint32_t canId, byte data[]) {
   message[2] = 0xFF;
   message[3] = 0xFF;
 
-  message[4] = data[0];
-  message[5] = data[1];
-  message[6] = data[2];
-  message[7] = data[3];
-  message[8] = data[4];
-  message[9] = data[5];
-  message[10] = data[6];
-  message[11] = data[7];
+  message[4] = data[7];
+  message[5] = data[6];
+  message[6] = data[5];
+  message[7] = data[4];
+  message[8] = data[3];
+  message[9] = data[2];
+  message[10] = data[1];
+  message[11] = data[0];
 
   Serial.write(message, sizeof(message));
 }
@@ -83,7 +83,7 @@ void loop() {
         canId |= serial_message[3]; //set GROUP for
 
         for (int j = 0; j < 8; j++) {
-          buf[j] = serial_message[j+4];
+          buf[7 - j] = serial_message[j+4];
         }
 
         CAN.sendMsgBuf(canId, 1, sizeof(buf), buf);
@@ -108,7 +108,7 @@ void loop() {
 
       for (int i = 4; i < 12; i++) // print the data
       {
-        can_message[i] = buf[i - 4];
+        can_message[i] = buf[7 - (i - 4)];
       }
 
       Serial.write(can_message, 12);
