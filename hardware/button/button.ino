@@ -80,7 +80,7 @@ void loop()
 {
 
   if (ehome.checkReceive() == USER_HANDLED_FRAME) {
-    rcvmsg = ehome.getMessage();
+    rcvmsg = ehome.message;
 
     if (rcvmsg->isStatusFrame()) {
       for (i = 0; i < NUM_BUTTONS; i++) {
@@ -185,12 +185,13 @@ void loop()
 }
 
 void sendButtonMessage(uint8_t chanId, uint8_t buttonState) {
-  byte newData[8] = {0, 0, 0, 0, 0, 0, 0, 0};
   Buttons[chanId].state = buttonState;
-  newData[0] = chanId;
-  newData[1] = buttonState;
-  uint16_t frame = BUTTON_FRAME_ID;
-  ehome.sendMessage(frame, newData);
+  
+  //clean up message data
+  memset(ehome.message.data, 0, 8);
+  ehome.message.data[0] = chanId;
+  ehome.message.data[1] = buttonState;
+  ehome.sendMessage(BUTTON_FRAME_ID, ehome.message.data);
 }
 
 void sendTemperatureMessage(float temp) {
