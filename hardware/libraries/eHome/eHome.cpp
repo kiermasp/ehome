@@ -62,9 +62,16 @@ void eHome::setupActionRegister(){
 }
 
 void eHome::setupDeviceAddress(){
-	setNodeId(message.data[5]);
-	setGroupId(message.data[4]);
-	eeprom_write_block(message.data, FIRMWARE_ADDR, 4); 	//set firmware id
+	//set node id
+	_nodeId = message.data[5];
+	eeprom_write_byte(ID_ADDR, _nodeId);
+	
+	//set group id
+	_groupId = message.data[4];
+	eeprom_write_byte(GROUP_ADDR, _groupId);
+
+	//set firmware id
+	eeprom_write_block(message.data, FIRMWARE_ADDR, 4); 
 }
 
 void eHome::sendDeviceStatus(){
@@ -79,33 +86,10 @@ void eHome::sendDeviceStatus(){
 	sendMessage(ACTION_REGISTER_FRAME_RESPONSE, message.data);
 }
 
+
 void eHome::sendMessage(uint16_t frameId, byte* data){
     uint32_t frame = (uint32_t)frameId << 16; //set frame id
 	frame |= (uint16_t)_nodeId << 8; //set ID of device
 	frame |= _groupId; //set GROUP for
 	_can->sendMsgBuf(frame, 1, 8, data);
-}
-
-/************************************************************************/
-/* setting device id                                                                     */
-/************************************************************************/
-void eHome::setNodeId(uint8_t id){
-	_nodeId = id;
-	eeprom_write_byte(ID_ADDR, _nodeId);
-}
-
-/************************************************************************/
-/* set group id                                                                     */
-/************************************************************************/
-void eHome::setGroupId(uint8_t id){
-	_groupId = id;
-	eeprom_write_byte(GROUP_ADDR, _groupId);
-}
-
-/************************************************************************/
-/* set firmware id                                                                     */
-/************************************************************************/
-void eHome::setFirmwareId(const void* _src){
-	Serial.println("Set firmware id");
-	eeprom_write_block(_src, FIRMWARE_ADDR, 4);
 }
