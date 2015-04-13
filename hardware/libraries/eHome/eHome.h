@@ -44,9 +44,6 @@ class eHome {
 	  unsigned char _buf[8];
 	  long _canId;
 	  
-	  void setNodeId(uint8_t id);
-	  void setGroupId(uint8_t id);
-	  void setFirmwareId(const void* _src);
 	  void setupActionRegister();
 	  void setupDeviceAddress();
 	  void sendDeviceStatus();
