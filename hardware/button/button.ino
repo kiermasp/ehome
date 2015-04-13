@@ -6,16 +6,15 @@
 #include <DallasTemperature.h>
 #include <eHome.h>
 
-#define BUTTON_OPEN 0x00 // – rozwarte
-#define BUTTON_PUSHED 0xFF // – zwarte
-#define BUTTON_HOLDED_400MS 0xFA // – zwarte i przytrzymane przez 400ms
-#define BUTTON_HOLDED_1S 0xFB // – zwarte i przytrzymane przez 1s
-#define BUTTON_HOLDED_2S 0xFC // – zwarte i przytrzymane przez 2s
-#define BUTTON_HOLDED_3S 0xFD // – zwarte i przytrzymane przez 3s
-#define BUTTON_HOLDED_4S 0xFE // – zwarte i przytrzymane przez 4s
-
-#define BUTTON_FRAME_ID 0x301;
-#define TEMPERATURE_FRAME_ID 0x302;
+#define BUTTON_OPEN 0x00
+#define BUTTON_PUSHED 0xFF
+#define BUTTON_HOLDED_400MS 0xFA
+#define BUTTON_HOLDED_1S 0xFB
+#define BUTTON_HOLDED_2S 0xFC 
+#define BUTTON_HOLDED_3S 0xFD
+#define BUTTON_HOLDED_4S 0xFE
+#define BUTTON_FRAME_ID 0x301
+#define TEMPERATURE_FRAME_ID 0x302
 
 MCP_CAN CAN(10);  // Set CS to pin 10
 // DS18S20 Temperature chip i/o
@@ -74,15 +73,11 @@ START_INIT:
   sensors.setWaitForConversion(false);
 }
 
-Message* rcvmsg;
-
 void loop()
 {
 
   if (ehome.checkReceive() == USER_HANDLED_FRAME) {
-    rcvmsg = ehome.message;
-
-    if (rcvmsg->isStatusFrame()) {
+    if (ehome.message.isStatusFrame()) {
       for (i = 0; i < NUM_BUTTONS; i++) {
         sendButtonMessage(Buttons[i].id, Buttons[i].state);
       }
