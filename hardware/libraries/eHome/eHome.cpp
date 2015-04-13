@@ -69,11 +69,13 @@ void eHome::setupDeviceAddress(){
 
 void eHome::sendDeviceStatus(){
 	Serial.println("Sending device status");
-	memset(message.data, 0, 8);
-	eeprom_read_block(&message.data, FIRMWARE_ADDR, 4);
+	
+	memset(message.data, 0, 8); //cleanup data for message
+	eeprom_read_block(&message.data, FIRMWARE_ADDR, 4); //read Firmware id of device
 	sendMessage(DEVICE_FRAME_RESPONSE, message.data);
-	memset(message.data, 0, 8);
-	eeprom_read_block(&message.data, ACTIONS_ADDR, 4);
+	
+	memset(message.data, 0, 8); //cleanup data for message
+	eeprom_read_block(&message.data, ACTIONS_ADDR, 4); //read actions register of device
 	sendMessage(ACTION_REGISTER_FRAME_RESPONSE, message.data);
 }
 
