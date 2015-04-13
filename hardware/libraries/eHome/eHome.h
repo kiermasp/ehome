@@ -28,42 +28,29 @@ class eHome {
 	public:
 	  eHome(MCP_CAN*);
 	  
+	  Message message;
 	  uint32_t actions;
-	  
 	  uint8_t checkReceive();
-	  
-	  void(* resetFunc) (void) = 0;
-	  
-	  void setNodeId(uint8_t id);
-	  uint8_t getNodeId();
-	  
-	  void setGroupId(uint8_t id);
-	  uint8_t getGroupId();
-	  
-	  void setFirmwareId(const void* _src);
-	  void getFirmwareId(void* _dst);
-	  
-	  uint32_t getFrameId(uint16_t frameId);
-	  
-	  Message* getMessage();
-	  
+
 	  void sendMessage(uint16_t frameId, byte* data);
 	  
 	private:
-		  
 	  // Take a pointer to one CAN instance
 	  uint8_t _nodeId;
 	  uint8_t _groupId;
 	  
 	  MCP_CAN* _can;
-	  Message _message;
 	  unsigned char _len = 0;
 	  unsigned char _buf[8];
 	  long _canId;
 	  
+	  void setNodeId(uint8_t id);
+	  void setGroupId(uint8_t id);
+	  void setFirmwareId(const void* _src);
 	  void setupActionRegister();
 	  void setupDeviceAddress();
 	  void sendDeviceStatus();
+	  void(* resetFunc) (void) = 0;
 	};
 	
 #endif
