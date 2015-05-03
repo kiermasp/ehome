@@ -49,15 +49,11 @@ void setup()
 {
   Serial.begin(115200);
         
+        Serial.println("asd");
 START_INIT:
 
-  if (CAN_OK == CAN.begin(CAN_125KBPS))                  // init can bus : baudrate = 500k
+  if (CAN_OK != CAN.begin(CAN_125KBPS))  // init can bus : baudrate = 125k
   {
-    Serial.println("CAN BUS Shield init ok!");
-  }
-  else
-  {
-    Serial.println("CAN BUS Shield init fail");
     delay(100);
     goto START_INIT;
   }
@@ -83,7 +79,6 @@ void loop()
       }
     }
   }
-
 
   if (ehome.actions & 128) {
     if (millis() - temperatureDelay > 1000) {
