@@ -1,9 +1,20 @@
 #include "eHome.h"
 #include "OneWire.h"
+#include <avr/wdt.h>
 
 /************************************************************************/
 /* Message                                                                */
 /************************************************************************/
+
+uint8_t EEMEM NODEID = 11;
+uint8_t EEMEM GROUPID = 10;
+uint32_t EEMEM ACTIONS = 0;
+uint32_t EEMEM FIRMWARE = 0;
+
+struct ASD
+{
+	int i;
+};
 
 bool Message::isStatusFrame(){
 	return frameId == STATUS_FRAME_COMMAND;
@@ -11,9 +22,17 @@ bool Message::isStatusFrame(){
 
 eHome::eHome(MCP_CAN* can){
 	_can = can;
-	_nodeId = eeprom_read_byte(ID_ADDR);
-	_groupId = eeprom_read_byte(GROUP_ADDR);
-	actions = eeprom_read_dword(ACTIONS_ADDR);
+	_nodeId = eeprom_read_byte(&NODEID);
+	_groupId = eeprom_read_byte(&GROUPID);
+	actions = eeprom_read_dword(&ACTIONS);
+}
+
+void rebotNode()
+{
+	wdt_enable(WDTO_15MS);
+	while(1)
+	{
+	}
 }
 
 
@@ -31,15 +50,17 @@ uint8_t eHome::checkReceive(){
 		message.nodeId = _canId >> 8;
 		message.groupId = _canId;
 		
+		if(message.frameId == STATUS_FRAME_COMMAND){
+			sendDeviceStatus();
+			return 0;
+		}
+		
 		if(message.nodeId == _nodeId && message.groupId == _groupId){
 			
 			switch(message.frameId)
 			{
-				case STATUS_FRAME_COMMAND:
-				sendDeviceStatus();
-				return 0;
 				case RESET_FRAME_COMMAND:
-				resetFunc();
+				rebotNode();
 				return 0;
 				case SETUP_DEVICE_FRAME_REQUEST:
 				setupDeviceAddress();
@@ -57,38 +78,35 @@ uint8_t eHome::checkReceive(){
 }
 
 void eHome::setupActionRegister(){
-	eeprom_write_block(message.data, ACTIONS_ADDR, 4); //set actions register
-	eeprom_read_block(&actions, ACTIONS_ADDR, 4); //read action register to actions var
+	eeprom_write_block(message.data, &ACTIONS, 4); //set actions register
+	eeprom_read_block(&actions, &ACTIONS, 4); //read action register to actions var
 }
 
 void eHome::setupDeviceAddress(){
 	//set node id
 	_nodeId = message.data[5];
-	eeprom_write_byte(ID_ADDR, _nodeId);
+	eeprom_write_byte(&NODEID, _nodeId);
 	
-	//set group id
 	_groupId = message.data[4];
-	eeprom_write_byte(GROUP_ADDR, _groupId);
+	eeprom_write_byte(&GROUPID, _groupId);
 
-	//set firmware id
-	eeprom_write_block(message.data, FIRMWARE_ADDR, 4); 
+	eeprom_write_block(message.data, &FIRMWARE, 4);
 }
 
 void eHome::sendDeviceStatus(){
-	Serial.println("Sending device status");
 	
 	memset(message.data, 0, 8); //cleanup data for message
-	eeprom_read_block(&message.data, FIRMWARE_ADDR, 4); //read Firmware id of device
+	eeprom_read_block(&message.data, &FIRMWARE, 4); //read Firmware id of device
 	sendMessage(DEVICE_FRAME_RESPONSE, message.data);
 	
 	memset(message.data, 0, 8); //cleanup data for message
-	eeprom_read_block(&message.data, ACTIONS_ADDR, 4); //read actions register of device
+	eeprom_read_block(&message.data, &ACTIONS, 4); //read actions register of device
 	sendMessage(ACTION_REGISTER_FRAME_RESPONSE, message.data);
 }
 
 
 void eHome::sendMessage(uint16_t frameId, byte* data){
-    uint32_t frame = (uint32_t)frameId << 16; //set frame id
+	uint32_t frame = (uint32_t)frameId << 16; //set frame id
 	frame |= (uint16_t)_nodeId << 8; //set ID of device
 	frame |= _groupId; //set GROUP for
 	_can->sendMsgBuf(frame, 1, 8, data);

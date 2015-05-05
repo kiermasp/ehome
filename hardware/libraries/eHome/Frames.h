@@ -10,28 +10,6 @@
 #define FRAMES_H_
 
 
-// you can exclude onewire_search by defining that to 0
-#ifndef ID_ADDR
-#define ID_ADDR (uint8_t*)1
-#endif
-
-// Device group id
-#ifndef GROUP_ADDR
-#define GROUP_ADDR (uint8_t*)2
-#endif
-
-// Device group id // 4 bytes
-#ifndef FIRMWARE_ADDR
-#define FIRMWARE_ADDR (uint32_t*)3
-#endif
-
-// Messages Enable REGISTER // 4 bytes
-#ifndef ACTIONS_ADDR
-#define ACTIONS_ADDR (uint32_t*)8
-#endif
-
-
-
 /**
 *Sets address and group of device
 */
